@@ -1,11 +1,11 @@
 <h2>Sign up</h2>
 
-<%= form_with model: @user, url: new_user_registration_path, local: true do |f| %>
+<%= form_with model: @user, url: user_registration_path, local: true do |f| %>
   <%= render "devise/shared/error_messages", model: f.object %>
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.email_field :name, autofocus: true %>
+    <%= f.text_field :name, autofocus: true %>
   </div>
 
   <div class="field">
