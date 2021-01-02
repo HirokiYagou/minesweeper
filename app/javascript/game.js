@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function(){
   }
   
   // 難易度ボタンを押してマス分のtdを作る関数
-  function mekeSheet(e) {
+  function makeSheet(e) {
     if (e.id === 'easy') {
       rowNumber = 9;
       colNumber = 9;
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function(){
         let val = i * colNumber + j + 1;
         td.setAttribute('id', val)
       }
-      document.getElementById('feild').appendChild(tr);
+      document.getElementById('field').appendChild(tr);
     }
   }
   
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function(){
   // 難易度ボタン押しなおして再開するとき一旦tdを全部消す関数
   function clearSheet() {
     sheet = [];
-    const tbody = document.getElementById('feild');
+    const tbody = document.getElementById('field');
     while(tbody.firstChild) {
       tbody.removeChild(tbody.firstChild);
     }
@@ -309,7 +309,7 @@ document.addEventListener('DOMContentLoaded', function(){
     //難易度ボタン
     button.addEventListener('click', () => {
       clearSheet();
-      mekeSheet(button);
+      makeSheet(button);
       isPlaying = false;
       isDead = false;
       clearTimeout(timeoutId);
