@@ -1,20 +1,58 @@
+.nav {
+  font-size: 18px;
+  padding: 10px;
+  display: flex;
+}
+
+.nav> ul {
+  display: flex;
+}
+
+.lists-right> li {
+  margin-left: 10px;
+}
+
+.lists-left> li {
+  height: 30px;
+  width: 200px;
+  text-align: center;
+  margin-right: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+
+.user-name,
+.logout,
+.login,
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+}
+
 button {
   height: 30px;
-  width: 100px;
+  width: 200px;
   text-align: center;
   cursor: pointer;
   user-select: none;
 }
 
-table {
+
+
+
+.game-area {
   margin-top: 10px;
-  /* height: 350px;
-  border: 2px solid rgb(184, 184, 184); */
-  /* border-collapse: collapse; */
+  padding: 10px;
+}
+
+table {
+  background-color: whitesmoke;
+  padding: 5px;
+  border: 3px solid rgb(184, 184, 184);
 }
 
 thead {
-  border: 2px solid rgb(224, 224, 224);
+  
 }
 th {
   height: 35px;
@@ -42,7 +80,6 @@ td.clicked {
   height: 32px;
   width: 32px;
   border: 2px solid rgb(184, 184, 184);
-  /* box-shadow: inset 0 2px 0 rgb(184, 184, 184); */
 }
 td.a1 {
   color: blue;
@@ -73,8 +110,4 @@ img {
   margin: 0;
   height: 24px;
   width: 24px;
-}
-
-td.bomb {
-  /* background-color: greenyellow; */
 }
