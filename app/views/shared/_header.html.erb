@@ -1,3 +1,8 @@
+<ul class='lists-left'>
+  <li><button id="easy">初級</button></li>
+  <li><button id="normal">中級</button></li>
+  <li><button id="hard">上級</button></li>
+</ul>
 <ul class='lists-right'>
   <% if signed_in? %>
     <li><%= link_to current_user.name, '#', class: "user-name" %></li>
