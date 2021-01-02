@@ -1,3 +1,80 @@
-// Place all the styles related to the games controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+button {
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+table {
+  margin-top: 10px;
+  /* height: 350px;
+  border: 2px solid rgb(184, 184, 184); */
+  /* border-collapse: collapse; */
+}
+
+thead {
+  border: 2px solid rgb(224, 224, 224);
+}
+th {
+  height: 35px;
+  font-size: 28px;
+  background-color: rgb(224, 224, 224);
+}
+
+td {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  font-weight: bold;
+  border: 3px outset rgb(184, 184, 184);
+  background-color: rgb(224, 224, 224);
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+td.bombed {
+  background-color: red;
+}
+td.clicked {
+  height: 32px;
+  width: 32px;
+  border: 2px solid rgb(184, 184, 184);
+  /* box-shadow: inset 0 2px 0 rgb(184, 184, 184); */
+}
+td.a1 {
+  color: blue;
+}
+td.a2 {
+  color:green;
+}
+td.a3 {
+  color: red;
+}
+td.a4 {
+  color: darkblue;
+}
+td.a5 {
+  color: brown;
+}
+td.a6 {
+  color: rgb(0, 113, 128);
+}
+td.a7 {
+  color:black;
+}
+td.a8 {
+  color:gray;
+}
+
+img {
+  margin: 0;
+  height: 24px;
+  width: 24px;
+}
+
+td.bomb {
+  /* background-color: greenyellow; */
+}
