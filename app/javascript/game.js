@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   }
   
-  // tdのidから行rowと列colmunを得る関数
+  // tdのidから行rowと列columnを得る関数
   function getRowCol(e) {
     let r;
     let c;
