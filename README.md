@@ -10,9 +10,9 @@
 
 ### Association
 
-- has_many :records
+- has_many :games
 
-## recordsテーブル
+## gamesテーブル
 
 | Column  | Type    | Options     |
 | ------- | ------- | ----------- |
