@@ -30,3 +30,8 @@
 ```
 rails webpacker:install:vue
 ```
+
+```
+application.html.erb内に
+<%= javascript_pack_tag 'hello_vue' %>
+```
