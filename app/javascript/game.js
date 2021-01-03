@@ -318,53 +318,53 @@ document.addEventListener('DOMContentLoaded', function(){
       //td押す操作
       const tds = document.querySelectorAll('td');
       const tds2 = [...tds];
-      // clickした時
       tds2.forEach((td) => {
-          td.addEventListener('click', () => {
-            if (isPlaying === false){
-              setMine(td);
-              isPlaying = true;
-              startTime = Date.now();
-              countUp();
-            } 
-            
-            if(td.firstChild) {} else {
-              if(isDead === false){
-                if(td.classList.contains('bomb')){
-                  isDead = true;
-                  clearTimeout(timeoutId);
-                  td.classList.add('bombed');
-                  const tds3 = document.querySelectorAll('td');
-                  tds3.forEach((td) => {
-                    if(td.classList.contains('bomb')) {
-                      if(td.classList.contains('flag')) {
-                        
-                      } else {
-                        const img = document.createElement('img');
-                        img.src = '/assets/mine.png'
-                        td.appendChild(img);
-                        td.classList.add('clicked');
-                      }
+        // clickした時
+        td.addEventListener('click', () => {
+          if (isPlaying === false){
+            setMine(td);
+            isPlaying = true;
+            startTime = Date.now();
+            countUp();
+          } 
+          
+          if(td.firstChild) {} else {
+            if(isDead === false){
+              if(td.classList.contains('bomb')){
+                isDead = true;
+                clearTimeout(timeoutId);
+                td.classList.add('bombed');
+                const tds3 = document.querySelectorAll('td');
+                tds3.forEach((td) => {
+                  if(td.classList.contains('bomb')) {
+                    if(td.classList.contains('flag')) {
+                      
                     } else {
-                      if(td.classList.contains('flag')) {
-                        while(td.firstChild){
-                          td.removeChild(td.firstChild);
-                          td.classList.remove('flag');
-                        }
-                        const img = document.createElement('img');
-                        img.src = '/assets/minefalse.png'
-                        td.appendChild(img);
-                        td.classList.add('clicked');
-                      }
+                      const img = document.createElement('img');
+                      img.src = '/assets/mine.png'
+                      td.appendChild(img);
+                      td.classList.add('clicked');
                     }
-                  })
-                  
-                } else {
-                  mineSweep(td);
-                }
+                  } else {
+                    if(td.classList.contains('flag')) {
+                      while(td.firstChild){
+                        td.removeChild(td.firstChild);
+                        td.classList.remove('flag');
+                      }
+                      const img = document.createElement('img');
+                      img.src = '/assets/minefalse.png'
+                      td.appendChild(img);
+                      td.classList.add('clicked');
+                    }
+                  }
+                })
+                
+              } else {
+                mineSweep(td);
               }
             }
-          })
+          }
+        })
   
         // 右クリックしたとき
         let counter = 0;
