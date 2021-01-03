@@ -23,3 +23,10 @@
 ### Association
 
 - belongs_to :user
+
+
+# Vue.js導入手順まとめ
+
+```
+rails webpacker:install:vue
+```
