@@ -1,3 +1,113 @@
-// Place all the styles related to the games controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.nav {
+  font-size: 18px;
+  padding: 10px;
+  display: flex;
+}
+
+.nav> ul {
+  display: flex;
+}
+
+.lists-right> li {
+  margin-left: 10px;
+}
+
+.lists-left> li {
+  height: 30px;
+  width: 200px;
+  text-align: center;
+  margin-right: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+.lists-left> li:hover {
+  opacity: 0.5;
+}
+
+.user-name,
+.logout,
+.login,
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+}
+
+button {
+  height: 30px;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+
+
+.game-area {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+table {
+  background-color: whitesmoke;
+  padding: 5px;
+  border: 3px solid rgb(184, 184, 184);
+}
+
+th {
+  height: 35px;
+  font-size: 28px;
+  background-color: rgb(224, 224, 224);
+}
+
+td {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  font-weight: bold;
+  border: 3px outset rgb(184, 184, 184);
+  background-color: rgb(224, 224, 224);
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+td.bombed {
+  background-color: red;
+}
+td.clicked {
+  height: 32px;
+  width: 32px;
+  border: 2px solid rgb(184, 184, 184);
+}
+td.a1 {
+  color: blue;
+}
+td.a2 {
+  color:green;
+}
+td.a3 {
+  color: red;
+}
+td.a4 {
+  color: darkblue;
+}
+td.a5 {
+  color: brown;
+}
+td.a6 {
+  color: rgb(0, 113, 128);
+}
+td.a7 {
+  color:black;
+}
+td.a8 {
+  color:gray;
+}
+
+img {
+  margin: 0;
+  height: 22px;
+  width: 22px;
+}
