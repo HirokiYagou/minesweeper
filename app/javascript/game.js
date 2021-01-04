@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 isDead = true;
                 clearTimeout(timeoutId);
                 td.classList.add('bombed');
-                // formAppear();
+                formAppear();
                 const tds3 = document.querySelectorAll('#game-table td');
                 tds3.forEach((td) => {
                   if(td.classList.contains('bomb')) {
