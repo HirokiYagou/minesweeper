@@ -1,6 +1,5 @@
 <%= render "shared/header" %>
 
-
 <div class="game-area", oncontextmenu="return false">
   <table>
     <thead>
@@ -11,4 +10,8 @@
     </thead>
     <tbody id="field"></tbody>
   </table>
+</div>
+
+<div class="record-area">
+  1位<%= @games[0].time %><%= @games[0].user.name %>
 </div>
