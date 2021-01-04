@@ -43,7 +43,8 @@ button {
 
 
 
-.game-area {
+.game-area,
+.record-area {
   margin-top: 10px;
   padding: 10px;
 }
@@ -54,13 +55,13 @@ table {
   border: 3px solid rgb(184, 184, 184);
 }
 
-th {
+#game-table th {
   height: 35px;
   font-size: 28px;
   background-color: rgb(224, 224, 224);
 }
 
-td {
+#game-table td {
   margin: 0;
   padding: 0;
   height: 30px;
@@ -73,10 +74,10 @@ td {
   text-align: center;
   user-select: none;
 }
-td.bombed {
+#game-table td.bombed {
   background-color: red;
 }
-td.clicked {
+#game-table td.clicked {
   height: 32px;
   width: 32px;
   border: 2px solid rgb(184, 184, 184);
@@ -106,7 +107,7 @@ td.a8 {
   color:gray;
 }
 
-img {
+#game-table img {
   margin: 0;
   height: 22px;
   width: 22px;

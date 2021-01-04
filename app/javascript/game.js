@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     console.table(sheet);
     
-    const tds = document.querySelectorAll('td');
+    const tds = document.querySelectorAll('#game-table td');
     tds.forEach((td) => {
       const RC = getRowCol(td);
       let r = RC[0];
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function(){
           let R = r - 1 + i;
           let C = c - 1 + j;
           let searchId = Number(e.id) - colNumber - 2 + (colNumber * i) + j;
-          let searchTd = document.querySelectorAll('td')[searchId];
+          let searchTd = document.querySelectorAll('#game-table td')[searchId];
           if(R < 0 || R > rowNumber - 1 || C < 0 || C > colNumber - 1) {
             allCountRC.push(9);
           } else{
@@ -190,18 +190,8 @@ document.addEventListener('DOMContentLoaded', function(){
           }
         }      
       }
-      
-      // console.log(allCountRC);
-      // console.log(include0RC);
-      // let isSweep = true;
-      // for(let i = 0; i < 9; i++) {
-        //   if(allCountRC[i] === 0)
-        //   isSweep = false;
-        // }
-    } else {
-      
     }
-      
+
     if(include0RC === []) {
       return;
     }
@@ -228,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function(){
         let R = r - 1 + i;
         let C = c - 1 + j;
         let searchId = Number(e.id) - colNumber - 2 + (colNumber * i) + j;
-        let searchTd = document.querySelectorAll('td')[searchId];
+        let searchTd = document.querySelectorAll('#game-table td')[searchId];
         if(R < 0 || R > rowNumber - 1 || C < 0 || C > colNumber - 1) {
         } else{
           if(searchTd.classList.contains('flag')) {
@@ -256,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function(){
           let R = r - 1 + i;
           let C = c - 1 + j;
           let searchId = Number(e.id) - colNumber - 2 + (colNumber * i) + j;
-          let searchTd = document.querySelectorAll('td')[searchId];
+          let searchTd = document.querySelectorAll('#game-table td')[searchId];
           if(R < 0 || R > rowNumber - 1 || C < 0 || C > colNumber - 1) {
           } else{
             if(searchTd.firstChild) {} else {
@@ -265,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function(){
                   isDead = true;
                   clearTimeout(timeoutId);
                   searchTd.classList.add('bombed');
-                  const tds3 = document.querySelectorAll('td');
+                  const tds3 = document.querySelectorAll('#game-table td');
                   tds3.forEach((td) => {
                     if(td.classList.contains('bomb')) {
                       if(td.classList.contains('flag')) {
@@ -304,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function(){
   
   
   // ③ボタン操作たち
-  const buttons = document.querySelectorAll('button');
+  const buttons = document.querySelectorAll('.level-btn');
   buttons.forEach((button) => {
     //難易度ボタン
     button.addEventListener('click', () => {
@@ -316,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function(){
       document.getElementById('time').textContent = '000';
       
       //td押す操作
-      const tds = document.querySelectorAll('td');
+      const tds = document.querySelectorAll('#game-table td');
       const tds2 = [...tds];
       tds2.forEach((td) => {
         // clickした時
@@ -334,7 +324,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 isDead = true;
                 clearTimeout(timeoutId);
                 td.classList.add('bombed');
-                const tds3 = document.querySelectorAll('td');
+                const tds3 = document.querySelectorAll('#game-table td');
                 tds3.forEach((td) => {
                   if(td.classList.contains('bomb')) {
                     if(td.classList.contains('flag')) {
