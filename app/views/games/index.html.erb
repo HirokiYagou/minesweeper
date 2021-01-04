@@ -13,5 +13,11 @@
 </div>
 
 <div class="record-area">
-  1位<%= @games[0].time %><%= @games[0].user.name %>
+  <div class="record">
+    <% 10.times do |i| %>
+      <% if @games[i]%>
+        <%= render partial: 'record', locals: { game: @games[i], i: i } %>
+      <% end %>
+    <% end %>
+  </div>
 </div>
