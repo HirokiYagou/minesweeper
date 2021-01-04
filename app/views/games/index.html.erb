@@ -6,6 +6,13 @@
       <tr>
         <th id="time" colspan="3">000</th>
         <th id="counter" colspan="3">000</th>
+        <th colspan="20">
+        <%= form_with model: @game, method: :post, id: "form" do |form| %>
+          <%= form.text_field :time ,id: "form-time", type: "hidden" %>
+          <%= form.text_field :comment ,id: "form-comment", type: "hidden" %>
+          <%= form.submit 'OK', id: "submit", type: "hidden" %>
+        <% end %>
+        </th>
       </tr>
     </thead>
     <tbody id="field"></tbody>

@@ -202,6 +202,7 @@ document.addEventListener('DOMContentLoaded', function(){
     if(rowNumber * colNumber - mineNumber === document.getElementsByClassName('clicked').length) {
       alert('completed!!');
       clearTimeout(timeoutId);
+      formAppear();
     }
   }
   
@@ -291,6 +292,23 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     
   }
+
+  // isPlaying, isDeadが変化した時送信フォームを出す関数
+  function formAppear() {
+    const formTime = document.getElementById('form-time')
+    const time = document.getElementById('time')
+    formTime.value = time.textContent
+    document.getElementById('form-comment').removeAttribute('type', 'hidden')
+    document.getElementById('submit').removeAttribute('type', 'hidden')
+    document.getElementById('submit').setAttribute('type', 'submit')
+  }
+  
+  // isPlaying, isDeadが変化した時送信フォームを消す関数
+  function formDestroy() {
+    document.getElementById('form-comment').setAttribute('type', 'hidden')
+    document.getElementById('submit').setAttribute('type', 'hidden')
+  }
+  
   
   
   // ③ボタン操作たち
@@ -302,6 +320,7 @@ document.addEventListener('DOMContentLoaded', function(){
       makeSheet(button);
       isPlaying = false;
       isDead = false;
+      formDestroy();
       clearTimeout(timeoutId);
       document.getElementById('time').textContent = '000';
       
@@ -324,6 +343,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 isDead = true;
                 clearTimeout(timeoutId);
                 td.classList.add('bombed');
+                formAppear();
                 const tds3 = document.querySelectorAll('#game-table td');
                 tds3.forEach((td) => {
                   if(td.classList.contains('bomb')) {
