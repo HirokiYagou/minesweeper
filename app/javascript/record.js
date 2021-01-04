@@ -11,20 +11,12 @@ function record() {
         alert(`ERROR${XHR.status}: ${XHR.statusText}`);
         return null;
       }
-      const record = XHR.response.game;
-      const user = XHR.response.user;
+      const HTML = XHR.response.html;
       const recordData = document.getElementById('record-datas');
-      const HTML = `
-        <td>
-          1位
-        </td>
-        <td>
-          ${record.time}秒
-        </td>
-        <td>
-          ${user.name}
-        </td>
-      `;
+      console.log(HTML)
+      while(recordData.firstChild){
+        recordData.removeChild(recordData.firstChild);
+      }
       recordData.insertAdjacentHTML('beforeend', HTML);
     };
     e.preventDefault();

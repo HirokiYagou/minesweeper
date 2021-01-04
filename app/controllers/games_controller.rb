@@ -1,14 +1,15 @@
 class GamesController < ApplicationController
-  before_action :set_games
-
   def index
+    set_games
     @game = Game.new
   end
   
   def create
     game = Game.new(game_params)
     if game.save
-      render json: { game: game, user: game.user }
+      set_games
+      partial = render_to_string(partial: 'game', collection: @games)
+      render json: { html: partial }
     end
   end
   
