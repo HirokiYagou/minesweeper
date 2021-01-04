@@ -20,7 +20,7 @@ function record() {
       recordData.insertAdjacentHTML('beforeend', HTML);
     };
     e.preventDefault();
-    document.getElementById('form-comment').setAttribute('type', 'hidden');
+    // document.getElementById('form-comment').setAttribute('type', 'hidden');
     document.getElementById('submit').setAttribute('type', 'hidden');
   })
 }

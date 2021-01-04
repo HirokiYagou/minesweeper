@@ -6,11 +6,11 @@
       <tr>
         <th id="time" colspan="3">000</th>
         <th id="counter" colspan="3">000</th>
-        <th colspan="20">
+        <th colspan="6">
         <%= form_with model: @game, method: :post, id: "form" do |form| %>
           <%= form.text_field :time ,id: "form-time", type: "hidden" %>
-          <%= form.text_field :comment ,id: "form-comment", type: "hidden" %>
-          <%= form.submit 'OK', id: "submit", type: "hidden" %>
+          <%# <%= form.text_field :comment ,id: "form-comment", type: "hidden" %>
+          <%= form.submit 'save record', id: "submit", type: "hidden" %>
         <% end %>
         </th>
       </tr>
@@ -20,12 +20,13 @@
 </div>
 
 <div class="record-area">
-  <table class="record">
+  <table id="all-records" class="records">
     <thead>
       <tr>
-        <th id="ranking">順位</th>
-        <th id="time">記録</th>
-        <th id="user">ユーザー</th>
+        <th class="ranking-head">順位</th>
+        <th class="time-head">記録</th>
+        <th class="user-head">ユーザー</th>
+        <th class="day-head">日付</th>
       </tr>
     </thead>
     <tbody id="record-datas">
