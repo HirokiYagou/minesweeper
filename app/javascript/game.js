@@ -295,12 +295,14 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // isPlaying, isDeadが変化した時送信フォームを出す関数
   function formAppear() {
-    const formTime = document.getElementById('form-time')
-    const time = document.getElementById('time')
-    formTime.value = time.textContent
-    // document.getElementById('form-comment').removeAttribute('type', 'hidden')
-    document.getElementById('submit').removeAttribute('type', 'hidden')
-    document.getElementById('submit').setAttribute('type', 'submit')
+    if (document.querySelectorAll('.bomb').length === 99 && document.querySelectorAll('.lists-left> li')[1].textContent === "ログアウト") {
+      const formTime = document.getElementById('form-time')
+      const time = document.getElementById('time')
+      formTime.value = time.textContent
+      // document.getElementById('form-comment').removeAttribute('type', 'hidden')
+      document.getElementById('submit').removeAttribute('type', 'hidden')
+      document.getElementById('submit').setAttribute('type', 'submit')
+    }
   }
   
   // isPlaying, isDeadが変化した時送信フォームを消す関数

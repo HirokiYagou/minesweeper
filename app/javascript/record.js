@@ -13,7 +13,6 @@ function record() {
       }
       const HTML = XHR.response.html;
       const recordData = document.getElementById('record-datas');
-      console.log(HTML)
       while(recordData.firstChild){
         recordData.removeChild(recordData.firstChild);
       }
