@@ -43,9 +43,15 @@ button {
 
 
 
-.game-area {
+.game-area,
+.record-area {
   margin-top: 10px;
   padding: 10px;
+}
+
+#submit {
+  padding: 0 10px;
+  font-size: 20px;
 }
 
 table {
@@ -54,13 +60,13 @@ table {
   border: 3px solid rgb(184, 184, 184);
 }
 
-th {
+#game-table th {
   height: 35px;
   font-size: 28px;
   background-color: rgb(224, 224, 224);
 }
 
-td {
+#game-table td {
   margin: 0;
   padding: 0;
   height: 30px;
@@ -73,10 +79,10 @@ td {
   text-align: center;
   user-select: none;
 }
-td.bombed {
+#game-table td.bombed {
   background-color: red;
 }
-td.clicked {
+#game-table td.clicked {
   height: 32px;
   width: 32px;
   border: 2px solid rgb(184, 184, 184);
@@ -106,8 +112,39 @@ td.a8 {
   color:gray;
 }
 
-img {
+#game-table img {
   margin: 0;
   height: 22px;
   width: 22px;
+}
+
+
+// ここからrecord area
+.ranking-head {
+  width: 50px;
+}
+.time-head {
+  width: 80px;
+}
+.user-head {
+  width: 150px;
+}
+.day-head {
+  width: 100px;
+}
+.comment-head {
+  width: 300px;
+}
+.ranking-data,
+.time-data,
+.user-data {
+  text-align: center;
+  font-size: 16px;
+}
+.day-data {
+  text-align: center;
+  font-size: 14px;
+}
+.comment-data {
+  font-size: 12px;
 }

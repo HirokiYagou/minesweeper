@@ -1,0 +1,15 @@
+<tr class="record-data">
+  <td class="ranking-data">
+    <%= game_counter + 1 %>位
+  </td>
+  <td class="time-data">
+    <%= game.time %>秒
+  </td>
+  <td class="user-data">
+    <%= game.user.name %>
+  </td>
+  <td class="day-data">
+    <% day = game.created_at %>
+    <%= "#{day.year}/#{day.month}/#{day.day}" %>
+  </td>
+</tr>

@@ -23,3 +23,15 @@
 ### Association
 
 - belongs_to :user
+
+
+# Vue.js導入手順まとめ
+
+```
+rails webpacker:install:vue
+```
+
+```
+application.html.erb内に
+<%= javascript_pack_tag 'hello_vue' %>
+```
