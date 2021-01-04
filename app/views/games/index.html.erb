@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
 <div class="game-area", oncontextmenu="return false">
-  <table>
+  <table id="game-table">
     <thead>
       <tr>
         <th id="time" colspan="3">000</th>
@@ -13,11 +13,22 @@
 </div>
 
 <div class="record-area">
-  <div class="record">
-    <% 10.times do |i| %>
-      <% if @games[i]%>
-        <%= render partial: 'record', locals: { game: @games[i], i: i } %>
+  <table class="record">
+    <thead>
+      <tr>
+        <th id="ranking">順位</th>
+        <th id="time">記録</th>
+        <th id="user">ユーザー</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% 10.times do |i| %>
+        <tr>
+          <% if @games[i]%>
+            <%= render partial: 'record', locals: { game: @games[i], i: i } %>
+          <% end %>
+        </tr>
       <% end %>
-    <% end %>
-  </div>
+    </tbody>
+  </table>
 </div>
