@@ -30,11 +30,11 @@
     </thead>
     <tbody>
       <% 10.times do |i| %>
-        <tr>
-          <% if @games[i]%>
+        <%  if @games[i]%>
+          <tr id="record-data">
             <%= render partial: 'record', locals: { game: @games[i], i: i } %>
-          <% end %>
-        </tr>
+          </tr>
+        <% end %>
       <% end %>
     </tbody>
   </table>

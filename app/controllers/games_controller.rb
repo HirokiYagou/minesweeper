@@ -7,7 +7,7 @@ class GamesController < ApplicationController
   def create
     game = Game.new(game_params)
     if game.save
-      redirect_to root_path
+      render json: { game: game, user: game.user }
     end
   end
 
