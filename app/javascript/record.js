@@ -13,7 +13,7 @@ function record() {
       }
       const record = XHR.response.game;
       const user = XHR.response.user;
-      const recordData = document.getElementById('record-data');
+      const recordData = document.getElementById('record-datas');
       const HTML = `
         <td>
           1位
@@ -25,7 +25,7 @@ function record() {
           ${user.name}
         </td>
       `;
-      recordData.insertAdjacentHTML('afterend', HTML);
+      recordData.insertAdjacentHTML('beforeend', HTML);
     };
     e.preventDefault();
     document.getElementById('form-comment').setAttribute('type', 'hidden');

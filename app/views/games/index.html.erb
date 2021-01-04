@@ -28,14 +28,8 @@
         <th id="user">ユーザー</th>
       </tr>
     </thead>
-    <tbody>
-      <% 10.times do |i| %>
-        <%  if @games[i]%>
-          <tr id="record-data">
-            <%= render partial: 'record', locals: { game: @games[i], i: i } %>
-          </tr>
-        <% end %>
-      <% end %>
+    <tbody id="record-datas">
+      <%= render partial: 'game', collection: @games %>
     </tbody>
   </table>
 </div>
